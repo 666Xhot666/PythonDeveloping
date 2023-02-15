@@ -1,3 +1,4 @@
+# Variant 6
 def int_input():
     num = int(input('Enter number <<N>> 1<=N>=9:\t'))
     if num < 1 or num > 9:
