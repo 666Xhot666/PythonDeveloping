@@ -3,7 +3,11 @@
 # -5, if a=b
 # 3*a/b+1, if a<b
 def int_input(name):
-    return int(input(f'Enter {name} number'))
+    num = int(input(f'Enter {name} number, that greater than 0:\t'))
+    if num < 0:
+        print('You have been entered wrong number try again!\n')
+        return int_input(name)
+    return num
 
 
 def first(a, b):
