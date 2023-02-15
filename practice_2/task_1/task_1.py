@@ -26,7 +26,7 @@ def sportsman_function(m, k, checkpoint):
 
 def second_task():
     checkpoint = 50
-    m, k = int_input('distance of first day'), int_input('percentage of distance increase')/100
+    m, k = int_input('distance of first day (km)'), int_input('percentage of distance increase')/100
     print(f'The athlete will run more than {checkpoint} km in {sportsman_function(m, k, checkpoint)} days')
 
 
