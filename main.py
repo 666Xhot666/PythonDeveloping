@@ -9,10 +9,6 @@ def print_menu():
     print('3 -- Exit')
 
 
-# task_1()
-# task_2()
-
-
 if __name__ == '__main__':
     while True:
         print_menu()
