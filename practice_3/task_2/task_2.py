@@ -2,22 +2,26 @@ import re
 
 
 def string_input():
-    return input('Enter string for filtering:\n')
+    try:
+        word = input('Enter word for calculating:\n').strip()
+        word = re.match(r'^\w+?[A-Za-z]+\S+\d?', word).group(0)
+    except:
+        print('Wrong input. Please try again')
+        string_input()
+    return word
 
 
-def find_words(string_for_filtering):
-    string_for_filtering_arr = re.split(r'\s|\W\s|\W', string_for_filtering)
-    result = []
-    for word in string_for_filtering_arr:
-        if re.findall(r'e', word).__len__() == 3:
-            result.append(word)
-    return result
+def calculate_ascii_sum(word):
+    word_sum = 0
+    for char in word:
+        word_sum += ord(char)
+    return word_sum
 
 
 def task_2():
-    string_for_filtering = string_input()
-    print('\nResult :: \n')
-    print(f'{",  ".join(find_words(string_for_filtering))}')
+    word = string_input()
+    print('Result ::\nSum of ASCII codes are ::: ')
+    print(f'\033[33m{calculate_ascii_sum(word)}\033[0m\n')
 
 
 if __name__ == '__main__':
