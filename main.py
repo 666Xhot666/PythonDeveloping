@@ -1,4 +1,5 @@
 from practice_4.task_1.task_1 import task_1
+from practice_4.task_2.task_2 import task_2
 
 
 def print_menu():
@@ -18,8 +19,8 @@ if __name__ == '__main__':
             print('Wrong input. Please enter a number')
         if option == 1:
             task_1()
-        # elif option == 2:
-        #     task_2()
+        elif option == 2:
+            task_2()
         elif option == 3:
             print('Thanks for reviewing.')
             exit()
